@@ -2,13 +2,25 @@ import React, {Component} from 'react';
 
 
 class Personcard extends Component{
+    constructor (props){
+        super(props);
+        this.state = {
+            ageperson:this.props.age,
+        };
+    }
+
+    addYear = () => {
+        let agemoreone=this.state.ageperson+1;
+        this.setState({ ageperson: agemoreone });
+    };
     render (){
+        const {firstName,lastName,age,hairColor}=this.props;
         return (
             <div>
-                <h1>{this.props.firstName}</h1>
-                <h1>{this.props.lastName}</h1>
-                <p>{this.props.age}</p>
-                <p>{this.props.hairColor}</p>
+                <h3>{firstName}, {lastName}</h3>
+                <h3>Age: {this.state.ageperson}</h3>
+                <p>Hair Color: {hairColor}</p>
+                <button onClick={this.addYear}>Sumar un año a: {firstName} {lastName} </button>
             </div>
             
             )
