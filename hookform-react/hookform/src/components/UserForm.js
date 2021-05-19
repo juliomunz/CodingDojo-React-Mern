@@ -26,9 +26,13 @@ const UserForm = (props) => {
                     <label>Nombre:  </label>
                     <input type="text" onChange={ (e) => setForm({...form,firstName:e.target.value}) } value={form.firstName}/>
                 </div>
+                <div>   
+                    <label>Apellido:  </label>
+                    <input type="text" onChange={ (e) => setForm({...form,lastName:e.target.value}) } value={form.lastName}/>
+                </div>
                 <div>
                     <label>Email:  </label>
-                    <input type="text" onChange={ (e) => setForm({...form,firstName:e.target.value}) } value={form.firstName}/>
+                    <input type="text" onChange={ (e) => setForm({...form,email:e.target.value}) } value={form.email}/>
                 </div>
                 <div>
                     <label>Contraseña: </label>
@@ -38,6 +42,7 @@ const UserForm = (props) => {
                     <label>Confirmar Contraseña: </label>
                     <input type="text" onChange={ (e) => setForm({...form,confirmpassword:e.target.value}) } value={form.confirmpassword}/>
                 </div>
+                <input type="submit" value="Crear Usuario" />
             </form>
             <div className="showinfo">
                 <h1>Datos del usuario</h1>
