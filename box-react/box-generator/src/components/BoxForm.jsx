@@ -4,7 +4,7 @@ const BoxForm = (props) => {
   const { boxes, setBoxes } = props;
   
 
-  const[color,setColor]=useState('#000000');
+  const[color,setColor]=useState();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -15,11 +15,11 @@ const BoxForm = (props) => {
     <div>
       <form onSubmit={onSubmit}  >
         <div className="form-group">
-          <label htmlFor="box">Elegir color: </label>
+          <label htmlFor="box">Pincha un color: </label>
           <input type="color" name="box" onChange={ (e) => setColor(e.target.value) }></input>
         </div>
         <div className="form-group">
-          <input type="submit" value='Agregar Color'></input>
+          <input type="submit" value='Agrégalo'></input>
         </div>
       </form>
     </div>

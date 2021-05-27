@@ -8,10 +8,10 @@ const Results = (props) => {
     return (
         <div className='content'>
             { 
-      data.length>0 && data.map((item,i)=><div className='box' key={i} style={{backgroundColor:item,color:'#ffffff'}}> {item} </div>)
-      
-      }
-      
+                data.length > 0 && data.map((item, i)=>
+                <div className='box' key={i} style={{backgroundColor:item}}> {item} 
+                </div>)
+            }
         </div>
     );
 }

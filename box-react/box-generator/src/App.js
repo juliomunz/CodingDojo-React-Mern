@@ -1,5 +1,5 @@
-import BoxForm from './Components/BoxForm';
-import Results from './Components/Results';
+import BoxForm from './components/BoxForm';
+import Results from './components/Results';
 import './App.css';
 import React, {useState} from "react";
 
@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <BoxForm boxes={boxes} setBoxes={setBoxes} />
       <Results data={boxes} />
-      
     </div>
   );
 }
